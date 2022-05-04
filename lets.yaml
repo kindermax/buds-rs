@@ -1,0 +1,16 @@
+shell: bash
+
+commands:
+  build:
+    cmd: cargo build --release
+
+  install:
+    options: |
+      Usage: lets install <path>
+      Example:
+        lets install /home/max/bin
+        lets install /usr/local/bin
+    depends: [build]
+    cmd: |
+      cp target/release/buds-rs "${LETSOPT_PATH}"/buds-rs
+      echo You are ready to use 'buds-rs' binary
