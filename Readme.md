@@ -1,5 +1,13 @@
 # Buds-rs is a tool to communicate with bluetooth headphones (earbuds)
 
+
+## Usage
+
+Show battery level
+
+```
+buds-rs --mac 6C:0D:E1:9C:0E:E1 -c 19   # -c is an optional RFCOMM device channel
+```
 ## Install
 
 First you need to install some system packages

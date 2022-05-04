@@ -15,9 +15,11 @@ use tokio::io::{AsyncReadExt, AsyncWriteExt};
 #[derive(Debug, StructOpt)]
 #[structopt(name = "buds", about = "CLI to comunicate with bluetooth Buds")]
 struct Opt {
-    #[structopt(long)]
+    /// Device mac address
+    #[structopt(short, long)]
     mac: String,
 
+    /// Device RFCOMM channel
     #[structopt(short, long)]
     channel: Option<u8>,
 }
